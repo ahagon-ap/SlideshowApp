@@ -13,6 +13,11 @@
 		DF1C31F32C3398A900354D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1C31F12C3398A900354D9B /* Main.storyboard */; };
 		DF1C31F52C3398AB00354D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1C31F42C3398AB00354D9B /* Assets.xcassets */; };
 		DF1C31F82C3398AB00354D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1C31F62C3398AB00354D9B /* LaunchScreen.storyboard */; };
+		DF1C32112C339FC800354D9B /* dog1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF1C320D2C339FC800354D9B /* dog1.jpg */; };
+		DF1C32122C339FC800354D9B /* dog2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF1C320E2C339FC800354D9B /* dog2.jpg */; };
+		DF1C32132C339FC800354D9B /* dog3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF1C320F2C339FC800354D9B /* dog3.jpg */; };
+		DF1C32142C339FC800354D9B /* dog4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF1C32102C339FC800354D9B /* dog4.jpg */; };
+		DF1C32162C35108E00354D9B /* ZoomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1C32152C35108E00354D9B /* ZoomImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		DF1C31F42C3398AB00354D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF1C31F72C3398AB00354D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF1C31F92C3398AB00354D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF1C320D2C339FC800354D9B /* dog1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog1.jpg; sourceTree = "<group>"; };
+		DF1C320E2C339FC800354D9B /* dog2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog2.jpg; sourceTree = "<group>"; };
+		DF1C320F2C339FC800354D9B /* dog3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog3.jpg; sourceTree = "<group>"; };
+		DF1C32102C339FC800354D9B /* dog4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog4.jpg; sourceTree = "<group>"; };
+		DF1C32152C35108E00354D9B /* ZoomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,15 @@
 				DF1C31EB2C3398A900354D9B /* AppDelegate.swift */,
 				DF1C31ED2C3398A900354D9B /* SceneDelegate.swift */,
 				DF1C31EF2C3398A900354D9B /* ViewController.swift */,
+				DF1C32152C35108E00354D9B /* ZoomImageViewController.swift */,
 				DF1C31F12C3398A900354D9B /* Main.storyboard */,
 				DF1C31F42C3398AB00354D9B /* Assets.xcassets */,
 				DF1C31F62C3398AB00354D9B /* LaunchScreen.storyboard */,
 				DF1C31F92C3398AB00354D9B /* Info.plist */,
+				DF1C320D2C339FC800354D9B /* dog1.jpg */,
+				DF1C320E2C339FC800354D9B /* dog2.jpg */,
+				DF1C320F2C339FC800354D9B /* dog3.jpg */,
+				DF1C32102C339FC800354D9B /* dog4.jpg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -126,7 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF1C31F82C3398AB00354D9B /* LaunchScreen.storyboard in Resources */,
+				DF1C32122C339FC800354D9B /* dog2.jpg in Resources */,
 				DF1C31F52C3398AB00354D9B /* Assets.xcassets in Resources */,
+				DF1C32142C339FC800354D9B /* dog4.jpg in Resources */,
+				DF1C32112C339FC800354D9B /* dog1.jpg in Resources */,
+				DF1C32132C339FC800354D9B /* dog3.jpg in Resources */,
 				DF1C31F32C3398A900354D9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +160,7 @@
 				DF1C31F02C3398A900354D9B /* ViewController.swift in Sources */,
 				DF1C31EC2C3398A900354D9B /* AppDelegate.swift in Sources */,
 				DF1C31EE2C3398A900354D9B /* SceneDelegate.swift in Sources */,
+				DF1C32162C35108E00354D9B /* ZoomImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
