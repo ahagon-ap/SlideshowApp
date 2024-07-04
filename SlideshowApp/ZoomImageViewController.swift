@@ -9,10 +9,16 @@ import UIKit
 
 class ZoomImageViewController: UIViewController {
 
+    @IBOutlet weak var DetailImage: UIScrollView!
+    
+    var image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let widthSize = UIScreen.main.bounds.size.width // 画面の横の大きさを取得
+        let imageViewBackground = UIImageView(frame: CGRect(x: 0, y: 0, width: widthSize, height: widthSize * 1.2)) // 背景画像の大きさを設定
+        imageViewBackground.image = image // 画像を設定
+        self.view.addSubview(imageViewBackground) // 背景画像を追加する
     }
     
 

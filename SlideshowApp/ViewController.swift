@@ -38,11 +38,16 @@ class ViewController: UIViewController {
         let firstImage = UIImage(named: "dog1.jpg")
         dogImages.image = firstImage
         dogImages.isUserInteractionEnabled = true
-        dogImages.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:)))
+        dogImages.addGestureRecognizer(tapGestureRecognizer)
     }
     
     @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let detailVC = storyboard.instantiateViewController(withIdentifier: "ZoomImageViewController") as? ZoomImageViewController {
+                    detailVC.image = dogImages.image
+                    self.present(detailVC, animated: true, completion: nil)
+                }
     }
     
     @IBAction func start(_ sender: Any) {
@@ -112,6 +117,9 @@ class ViewController: UIViewController {
         }
         dogImages.image = imageArray[nowIndex]
     }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        }
     
 }
 
