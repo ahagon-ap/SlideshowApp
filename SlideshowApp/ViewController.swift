@@ -4,6 +4,11 @@
 
 import UIKit
 
+enum Direction {
+    case plus
+    case minus
+}
+
 class ViewController: UIViewController {
     
     // UI部品との接続
@@ -44,6 +49,13 @@ class ViewController: UIViewController {
             detailVC.image = dogImages.image
             self.present(detailVC, animated: true, completion: nil)
         }
+        // スライドショーを止める
+        timer.invalidate()
+        timer = nil
+        startButton.setTitle("再生", for: .normal)
+        goButton.isEnabled = true
+        backButton.isEnabled = true
+        
     }
     
     // 再生ボタンを押した時の関数
@@ -77,24 +89,24 @@ class ViewController: UIViewController {
     
     // 進むボタン
     @IBAction func go(_ sender: Any) {
-        changeImage(direction: "plus")
+        changeImage(direction: .plus)
     }
     
     // 戻るボタン
     @IBAction func back(_ sender: Any) {
-        changeImage(direction: "minus")
+        changeImage(direction: .minus)
     }
     
     // セレクタに入れるため
     @objc func changeImageAutomatically() {
-        changeImage(direction: "plus")
+        changeImage(direction: .plus)
     }
     
     // 画像の遷移する順番
-    @objc func changeImage(direction: String) {
+    func changeImage(direction: Direction) {
         
         // 再生ボタンと進むボタンの時の挙動
-        if (direction == "plus"){
+        if (direction == .plus){
             
             // indexを増やして表示する画像を切り替える
             nowIndex += 1

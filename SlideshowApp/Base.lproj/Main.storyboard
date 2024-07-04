@@ -20,7 +20,6 @@
                                 <rect key="frame" x="40" y="109" width="313" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="cWt-Dn-8ML"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qbE-Ev-EOa"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXV-5e-9KD">
@@ -81,15 +80,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-hv-8vc">
-                                <rect key="frame" x="35" y="97" width="324" height="346"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="33b-rY-VQe"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Ksh-Qc-jVd"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Awb-Je-fnP"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="3Kb-kU-mBo"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEl-iq-GXW">
                                 <rect key="frame" x="168.66666666666666" y="733" width="56" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -98,20 +88,25 @@
                                     <segue destination="ZtC-a9-P58" kind="unwind" unwindAction="unwind:" id="0jm-2v-iI4"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1r-E4-KT4">
+                                <rect key="frame" x="0.0" y="69" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q1r-E4-KT4" secondAttribute="height" id="SrX-GJ-3ne"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dQE-rr-xqZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zUR-hv-8vc" firstAttribute="leading" secondItem="7vC-51-75T" secondAttribute="leadingMargin" constant="19" id="DFs-tT-6hi"/>
                             <constraint firstItem="qEl-iq-GXW" firstAttribute="centerX" secondItem="7vC-51-75T" secondAttribute="centerX" id="G0z-zi-PME"/>
-                            <constraint firstItem="qEl-iq-GXW" firstAttribute="centerX" secondItem="7vC-51-75T" secondAttribute="centerX" id="VHF-u8-PdA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zUR-hv-8vc" secondAttribute="trailing" constant="18" id="tLp-k8-C3b"/>
+                            <constraint firstItem="q1r-E4-KT4" firstAttribute="top" secondItem="dQE-rr-xqZ" secondAttribute="top" constant="10" id="Voq-uc-fJN"/>
+                            <constraint firstItem="dQE-rr-xqZ" firstAttribute="trailing" secondItem="q1r-E4-KT4" secondAttribute="trailing" id="mDG-b2-Hih"/>
+                            <constraint firstItem="q1r-E4-KT4" firstAttribute="leading" secondItem="dQE-rr-xqZ" secondAttribute="leading" id="qmT-jx-BCF"/>
                             <constraint firstItem="dQE-rr-xqZ" firstAttribute="bottom" secondItem="qEl-iq-GXW" secondAttribute="bottom" constant="50" id="u80-4U-kQk"/>
-                            <constraint firstItem="zUR-hv-8vc" firstAttribute="top" secondItem="7vC-51-75T" secondAttribute="topMargin" constant="38" id="uUn-fL-V8E"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="DetailImage" destination="zUR-hv-8vc" id="JF1-Yx-Qao"/>
+                        <outlet property="detailImage" destination="q1r-E4-KT4" id="a5j-lz-8cl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dX-bM-WUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
