@@ -49,12 +49,14 @@ class ViewController: UIViewController {
             detailVC.image = dogImages.image
             self.present(detailVC, animated: true, completion: nil)
         }
-        // スライドショーを止める
-        timer.invalidate()
-        timer = nil
-        startButton.setTitle("再生", for: .normal)
-        goButton.isEnabled = true
-        backButton.isEnabled = true
+        // 再生中のスライドショーを止める
+        if (timer != nil) {
+            timer.invalidate()
+            timer = nil
+            startButton.setTitle("再生", for: .normal)
+            goButton.isEnabled = true
+            backButton.isEnabled = true
+        }
         
     }
     
